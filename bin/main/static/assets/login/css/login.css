@@ -1,0 +1,119 @@
+.grad1 {
+    background: #14527F !important; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#14527F, #1d77b9) !important; /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#14527F, #1d77b9) !important; /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#14527F, #1d77b9) !important; /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#14527F, #1d77b9) !important; /* Standard syntax (must be last) */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #5e5e5e;
+  background-color: #fff;
+}
+
+.btn-danger {
+    background: red;
+    background: -webkit-linear-gradient( #ff8080, #bd0909);
+    background: -o-linear-gradient(#ff8080, #bd0909);
+    background: -moz-linear-gradient(#ff8080, #bd0909);
+    background: linear-gradient(#ff8080, #bd0909);
+}
+
+.lgn {
+    background: red;
+    background: -webkit-linear-gradient( #ff8080, #bd0909);
+    background: -o-linear-gradient(#ff8080, #bd0909);
+    background: -moz-linear-gradient(#ff8080, #bd0909);
+    background: linear-gradient(#ff8080, #bd0909);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.input-group:not(.input-group-lg):not(.input-group-sm) .input-group-addon .zmdi {
+    font-size: 20px;
+}
+
+.lc-block:not(.lcb-alt) .btn-login {
+    top: 50%;
+    margin-top: -20px;
+    right: -20px;
+}
+
+.btn-float {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 30px !important;
+}
+
+.btn-float i {
+    font-size: 17px;
+}
+
+.input-group:not(.input-group-lg):not(.input-group-sm) .input-group-addon:not(.last) {
+    padding-right: 5px;
+}
+
+.input-group-addon {
+    font-size: 15px;
+}
+
+.mtlogin {
+    margin-top: 155px;
+}
+
+.lc-block {
+    background: #00afef;
+    box-shadow: 0 1px 11px rgba(0, 0, 0, 0.90);
+    /* border-radius: 2px; */
+    border-radius: 22px;
+    width: 450px;
+    display: inline-block;
+    margin-top: 15px !important;
+    vertical-align: middle;
+    position: relative;
+}
+
+html, body {
+    min-height: 0vh;
+}
+
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.input-group .input-group-addon {
+    vertical-align: middle;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.mtlogin {
+    margin-top: 85px;
+}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+.mtlogin {
+    margin-top: 60px;
+    padding: 25px;
+}
+    
+.lc-block {
+    width: auto;
+}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+.mtlogin {
+    margin-top: 50px;
+}
+}

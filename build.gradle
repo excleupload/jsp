@@ -1,0 +1,67 @@
+
+plugins {
+	id 'org.springframework.boot' version '2.1.3.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+group = 'com'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation('org.springframework.boot:spring-boot-starter-security')
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'mysql:mysql-connector-java'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compileOnly("org.apache.tomcat.embed:tomcat-embed-jasper:9.0.14")
+	compileOnly("javax.servlet:jstl:1.2");
+	// https://mvnrepository.com/artifact/commons-codec/commons-codec
+	compile group: 'commons-codec', name: 'commons-codec'
+	compile group: 'org.json', name: 'json', version: '20090211'
+	/* Excel Reading Lib Start */
+	
+/* Excel Reading Lib Start */
+	
+	// https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+	compileOnly("org.apache.poi:poi-ooxml:4.0.0");
+			// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+	// https://mvnrepository.com/artifact/sax/sax
+	compileOnly("sax:sax:2.0.1");
+	
+	// https://mvnrepository.com/artifact/xerces/xercesImpl
+	compileOnly("xerces:xercesImpl:2.8.0");
+	
+	/* Excel Reading Lib End */
+	
+	/* CSV Write Lib Start */
+	// https://mvnrepository.com/artifact/net.sf.supercsv/super-csv/2.4.0
+	compileOnly("net.sf.supercsv:super-csv:2.4.0");
+	/* CSV Write Lib End */
+	/* Common IO Start */
+	// https://mvnrepository.com/artifact/commons-io/commons-io
+	//compileOnly("commons-io:commons-io:2.6");
+	
+	// https://mvnrepository.com/artifact/commons-io/commons-io
+compile group: 'commons-io', name: 'commons-io', version: '2.4'
+	
+	/* Common IO End */
+	
+	implementation("org.apache.poi:poi-ooxml:4.0.0");
+implementation("org.apache.poi:poi:4.0.0");
+implementation("org.apache.poi:poi-ooxml-schemas:4.0.0");
+implementation("org.apache.poi:poi-scratchpad:4.0.0");
+}

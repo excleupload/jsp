@@ -1,0 +1,40 @@
+#server-config
+server:
+  port: 8090
+  servlet:
+    context-path: /salesupload
+#database and jpa/hibernate-config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.102:3306/dalmia?useSSL=false
+    username: dalmia
+    password: dalmia@efive
+    hikari:
+      auto-commit: false #This property controls the default auto-commit behavior of connections returned from the pool.
+      connection-timeout: 36000 #This property controls the maximum number of milliseconds that a client (that's you) will wait for a connection from the pool.
+      idle-timeout: 600000 #This property controls the maximum amount of time that a connection is allowed to sit idle in the pool.
+      max-lifetime: 1800000 #This property controls the maximum lifetime of a connection in the pool.An in-use connection will never be retired, only when it is closed will it then be removed.
+      minimum-idle: 8 #This property controls the minimum number of idle connections that HikariCP tries to maintain in the pool.
+      maximum-pool-size: 64 #This property controls the maximum size that the pool is allowed to reach, including both idle and in-use connections.
+      poolName: pms-connection-pool #Connection pool name
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect #database-dialect to detect verion and type of database
+    open-in-view: false
+    hibernate:
+      ddl-auto: update #This property automatically reflects changes made in POJO/entity/model to database table
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true #set true to print database queries
+        format_sql: true #This property beautifies the queries printed by show_sql
+#  thymeleaf:
+#    cache: false #This property disables the thymeleaf template cache
+#    enabled: true #This enables Thymeleaf view resolution for Web frameworks.(Default true)  servlet:    multipart:
+    #max file and request size 
+          max-file-size: 10MB  
+          max-request-size: 11MB  
+          enabled: true
+         

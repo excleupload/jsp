@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org"> 
+<div id='navbar' class='main-nav' th:fragment="menu">  		
+	<nav class='navbar navbar-expand-lg'>
+		<div class='collapse navbar-collapse' id='navbarNavDropdown'>
+			<ul class='navbar-nav'>
+	<th:block th:if="${session.menuList.size()>0}" >
+	
+				<li class='nav-item' th:each="menuList : ${session.menuList}" th:id='${menuList[5]}' th:if="${menuList[2] != '#'}">
+					<a class='nav-link'  th:href="${contextPath + '/' + menuList[2]}">
+					<span class='active-item-here'></span>
+					<i class='fa fa-upload mr-5'></i> <span th:text="${menuList[1]}"></span>
+					</a>
+				</li>  
+</th:block>
+<!-- 				<li class='nav-item' id='user_management'> -->
+<!-- 					<a class='nav-link' href='user_management.html'><span class='active-item-here'></span><i class='fa fa-user mr-5'></i> <span>User Management</span></a> -->
+<!-- 				</li> -->
+			
+<!-- 			<th:block th:if="${session.optionList.size()>0}">	 -->
+<!-- 				<li class='nav-item dropdown' id='db_creation'> -->
+<!--                     <a class='nav-link dropdown-toggle' href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'> -->
+<!--                         <span class='active-item-here'></span> -->
+<!--                         <i class='fa fa-briefcase mr-5'></i> <span>DB Creation</span> -->
+<!--                     </a>				   -->
+<!--                     <ul class='dropdown-menu multilevel scale-up-left'> -->
+<!--                         <li class='nav-item' th:id='${optionList[3]}' th:each="optionList: ${session.optionList}"><a class='nav-link' th:href="${contextPath + '/' + optionList[2]}" title='' th:text="${optionList[1]}"></a></li> -->
+<!--                     </ul>				   -->
+<!--                 </li> -->
+<!-- </th:block> -->
+
+			</ul>
+		</div>
+	</nav> 
+</div>
+</html>
